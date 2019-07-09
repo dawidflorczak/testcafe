@@ -5,10 +5,16 @@ export const ro = {
 
 export const userData = {
   firstName: "UserName",
-  lastName: "UserSurName",
+  lastName: "UserSurname",
   email: "testt@test.com",
   password: "RoUser.123",
   birthDate: "4021746",
   zipCode: "12312", //345
   comment: "It is really sad that my city is not supported by your healthcare"
+};
+
+export const drugs = {
+  sildenafil: "Sildenafil",
+  viagra: "Viagra",
+  cialis: "Cialis"
 };

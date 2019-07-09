@@ -7,7 +7,7 @@ import {
   beNotified,
   confirmationPage
 } from "./locators";
-import { ro, userData } from "./consts";
+import { userData, drugs } from "./consts";
 import { scrollTo } from "./common_actions";
 
 fixture`RO smoke tests`.beforeEach(async t => {
@@ -58,7 +58,6 @@ test("Be notified, unknown zip code", async t => {
 });
 
 test("Treatment plan", async t => {
-  const drugName: string = "Sildenafil";
   await t.expect(mainPage.tabs.exists).ok();
   const treatmentPlans = mainPage.tabs.withText("Our treatment plans");
   await t
@@ -74,5 +73,5 @@ test("Treatment plan", async t => {
     .expect(treatmentTab.sideBarContent.exists)
     .ok()
     .expect(treatmentTab.sideBarTitle.innerText)
-    .contains(drugName);
+    .contains(drugs.sildenafil);
 });
