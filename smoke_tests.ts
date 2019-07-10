@@ -23,7 +23,7 @@ fixture`RO smoke tests`.beforeEach(async t => {
 })
   .page`https://start.ro.co/roman/ed/?s=ed-onb-titrate&utm_expid=.O9vTFADVROq81tYvJb_UdQ.1&utm_referrer=`;
 
-test("Check user name after register", async t => {
+test("Check if user name is visible after registration", async t => {
   await t
     .expect(mainPage.welcome.exists)
     .ok()
@@ -31,7 +31,7 @@ test("Check user name after register", async t => {
     .contains(userData.firstName);
 });
 
-test("Be notified, unknown zip code", async t => {
+test("Fill basic form with unknown zip code and set up email notification", async t => {
   const userEmail: string = userData.email;
   await t
     .expect(mainPage.continueVisit.exists)
@@ -57,7 +57,7 @@ test("Be notified, unknown zip code", async t => {
   await t.expect(confirmationTitle.exists).ok();
 });
 
-test("Treatment plan", async t => {
+test("Check treatment plan detials", async t => {
   await t.expect(mainPage.tabs.exists).ok();
   const treatmentPlans = mainPage.tabs.withText("Our treatment plans");
   await t

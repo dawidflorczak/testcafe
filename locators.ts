@@ -20,7 +20,10 @@ export const treatmentTab = {
   plans: Selector("li.product.product-has__thumb"),
   plansMainInfo: Selector(".product-main"),
   sideBarTitle: Selector("h2.product-modal-name.heading"),
-  sideBarContent: Selector(".product-modal-inner")
+  sideBarContent: Selector(".product-modal-inner"),
+  openPopularQuestions: Selector(".collapse-header"),
+  questionContent: Selector(".collapse.content"),
+  text: Selector(".modal-text")
 };
 
 export const basicForm = {
